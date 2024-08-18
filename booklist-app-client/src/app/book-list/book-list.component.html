@@ -1,0 +1,24 @@
+<h2>Book List</h2>
+<table>
+  <tr>
+    <th>ISBN</th>
+    <th>Title</th>
+    <th>Author</th>
+    <th>Description</th>
+    <th>Published Year</th>
+    <th>Publisher</th>
+    <th>Actions</th>
+  </tr>
+  <tr *ngFor="let book of books">
+    <td>{{ book.ISBN }}</td>
+    <td>{{ book.title }}</td>
+    <td>{{ book.author }}</td>
+    <td>{{ book.description }}</td>
+    <td>{{ book.publishedYear }}</td>
+    <td>{{ book.publisher }}</td>
+    <td>
+      <button (click)="editBook(book)">Edit</button>
+      <button (click)="deleteBook(book._id)">Delete</button>
+    </td>
+  </tr>
+</table>
